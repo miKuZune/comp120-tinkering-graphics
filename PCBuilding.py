@@ -36,7 +36,7 @@ while True:
     elif counterIncrease == True:
         counter +=1
         window.blit(complexMeme,(0,0))
-        if counter >= 1000:
+        if counter >= 500:
             counterIncrease = False
             text = font.render("What we really do.", False, BLACK)
 
