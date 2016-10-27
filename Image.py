@@ -20,7 +20,7 @@ window.blit(corsairMeme, (0,0))
 
 
 font = pygame.font.SysFont(None,40)
-text = font.render("Corsair cris evry tim.",False,WHITE)
+text = font.render("Corsair suddenly surrounded by darkness.",False,WHITE)
 memeTalk = text.get_rect()
 
 
