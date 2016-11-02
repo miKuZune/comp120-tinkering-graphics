@@ -44,6 +44,11 @@ while True:
             pygame.quit()
             sys.exit()
 
+    pressed = pygame.key.get_pressed()
+    if pressed[K_ESCAPE]:
+        pygame.quit()
+        sys.exit()
+
 
     memeTalk.centerx = 400
     memeTalk.centery = 560
