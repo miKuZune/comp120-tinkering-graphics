@@ -6,6 +6,8 @@ pygame.init()
 
 WIDTH = 800
 HEIGHT = 600
+window = pygame.display.set_mode((WIDTH, HEIGHT),0, 32)
+
 BLACK = (0,0,0)
 WHITE = (255,255,255)
 RED = (255,0,0)
@@ -28,13 +30,15 @@ while True:
 
 
 
-    pressed = pygame.key.get_pressed()
-    if pressed[K_ESCAPE]:
-        pygame.quit()
-        sys.exit()
+
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
+
+    pressed = pygame.key.get_pressed()
+    if pressed[K_ESCAPE]:
+        pygame.quit()
+        sys.exit()
 
     pygame.display.update()
