@@ -39,7 +39,7 @@ while True:
         if counter >= 500:
             counterIncrease = False
             text = font.render("What we really do.", False, BLACK)
-
+            
     pressed = pygame.key.get_pressed()
     if pressed[K_ESCAPE]:
         pygame.quit()

@@ -8,25 +8,17 @@ WIDTH = 800
 HEIGHT = 600
 window = pygame.display.set_mode((WIDTH, HEIGHT),0, 32)
 
-BLACK = (0,0,0)
-WHITE = (255,255,255)
-RED = (255,0,0)
-GREEN = (0,255,0)
-BLUE = (0,0,255)
 
 counter = 0
+randomNum = random.randint(0,4)
 
-
-OGTrap = pygame.image.load('TrapItsATrap.jpg')
-IDontAlways = pygame.image.load('TrapIDontAlways.jpg')
-IheardIts = pygame.image.load('TrapIHeardItsATrap.jpg')
-ImNotSaying = pygame.image.load('TrapImNotSaying.jpg')
-ElaborateRuse = pygame.image.load('TrapItsAnElaborateRuse.jpg')
+trapMemes = [pygame.image.load('TrapItsATrap.jpg'),pygame.image.load('TrapIDontAlways.jpg'),pygame.image.load('TrapIHeardItsATrap.jpg'),pygame.image.load('TrapImNotSaying.jpg'),pygame.image.load('TrapItsAnElaborateRuse.jpg')]
 
 while True:
     counter +=1
     if counter >=750:
         counter = 0
+        randomNum = random.randint(0,4)
 
 
 
@@ -36,9 +28,6 @@ while True:
             pygame.quit()
             sys.exit()
 
-    pressed = pygame.key.get_pressed()
-    if pressed[K_ESCAPE]:
-        pygame.quit()
-        sys.exit()
 
+    window.blit(trapMemes[randomNum],(0,0))
     pygame.display.update()
